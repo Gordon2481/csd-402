@@ -6,7 +6,7 @@
 from an initial temperature to a final temperature. User is prompted for
 the amount of water in kilograms and the initial and final temperature of the water.*/
 
-/*Forula for use is:
+/*Formula for use is:
  * Q = waterMass (finalTemperature - initialTemperature) * 4184
  * waterMass is water weight in kilograms
  * finalTemperature and initialTemperature are temperatures in Celsius
@@ -39,9 +39,13 @@ public class WaterHeatingCalculator {
         double Q = waterMass * (finalTemperature - initialTemperature) * 4184; // Declare and calculate Q
 
         // Step 3: Display Q as energy needed
-        System.out.println("The energy needed to heat water from an initial temperature of " + 
+        System.out.println("The energy needed to heat " + waterMass + 
+        " Kilograms of water from an initial temperature of " + 
         initialTemperature + "\u00B0C" + " to a final temperature of " + finalTemperature + 
         "\u00B0C" + " is " + Q + " Joules.");
+    
+        // Close the Scanner
+        input.close();
     }}
 
     /*code to get the degree symbol was found on stackoverflow - user nanofarad
