@@ -64,4 +64,4 @@ public class Rock_Paper_Scissors {
 
     }
 }
-// Methods user were learned through Introduction to Java Programming and Data Structures by Y.Daniel Liang
+// Methods used were learned through Introduction to Java Programming and Data Structures by Y.Daniel Liang
