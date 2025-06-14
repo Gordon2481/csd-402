@@ -1,4 +1,9 @@
-
+/*
+ Mike Gordon
+ 6/13/2025
+ M2: Programming Assignment
+ Rock-Paper-Scissors
+ */
 /*  Program to simulate Rock-Paper-Scissors
 Program should randomly generate the number of 1 (Rock), 2 (Paper), 3 (Scissors)
 User supplies thier own selection of the same values
@@ -59,3 +64,4 @@ public class Rock_Paper_Scissors {
 
     }
 }
+// Methods user were learned through Introduction to Java Programming and Data Structures by Y.Daniel Liang
