@@ -9,49 +9,39 @@ public class pyramid {
         int space;
 
         for (row = 1; row <= 7; ++row) {
+
             // Add leading spaces to align pyramid
             for (space = 7; space > row; --space) {
-                System.out.print(" ");
+                System.out.print("  ");
             }
 
-            // Print doubling number on each row
+            // Print doubling number on each row (left side)
             // Initialize number at 1
             int num = 1;
             for (column = 1; column <= row; column++) {
-                if (num == 1 | num == 2 | num == 4 | num == 8) {
-                    System.out.print(" " + num + " ");
-                }
-                else{
-                System.out.print(num + " ");}
+                System.out.print(num + " ");
                 // Double the number each iteration
                 num =  num * 2;
             }
 
-            // Make the new starting number the last printed number
-            num = num / 4;
-            for (column = 1; column <= row; column++) {
-                // Handle the occurence of zero
-                if (num == 0) {
-                    System.out.print("");
-                }
-                // Print out the back half of the line
-                else if (num == 1 | num == 2 | num == 4 | num == 8) {
-                    System.out.print(" " + num + " ");
-                }
-                else{
-                System.out.print(num + " ");}
+            // Print numbers (right side)
+            num = num / 2; // takes the number back to the last printed number
+            num = num / 2; // eliminates the middle number doubling
 
+            for (column = 1; column < row; column++) { // Print one less number to avoid zero
+                System.out.print(num + " ");
                 // Divide the number each iteration
                 num =  num / 2;
             }
 
+            
             // Add trailing spaces with the @ at the end
-            for (space = 8; space > row; --space) {
-                System.out.print(" ");
+            for (space = 7; space > row; --space) {
+                System.out.print("  ");
             }
-            System.out.print(" @");
 
-            System.out.println();
+            System.out.println("@");
+            System.out.println("");
             
         }
     }
