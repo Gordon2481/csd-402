@@ -12,14 +12,14 @@ public class pyramid {
 
             // Add leading spaces to align pyramid
             for (space = 7; space > row; --space) {
-                System.out.print("  ");
+                System.out.print("    "); // 4 spaces are needed to align pyramid
             }
 
             // Print doubling number on each row (left side)
             // Initialize number at 1
             int num = 1;
             for (column = 1; column <= row; column++) {
-                System.out.print(num + " ");
+                System.out.printf("%3d ",num); // "%3d " formating to align right, give 3 spaces per int
                 // Double the number each iteration
                 num =  num * 2;
             }
@@ -29,7 +29,7 @@ public class pyramid {
             num = num / 2; // eliminates the middle number doubling
 
             for (column = 1; column < row; column++) { // Print one less number to avoid zero
-                System.out.print(num + " ");
+                System.out.printf("%3d ",num); // "%3d " formating to align right, give 3 spaces per int
                 // Divide the number each iteration
                 num =  num / 2;
             }
@@ -37,11 +37,10 @@ public class pyramid {
             
             // Add trailing spaces with the @ at the end
             for (space = 7; space > row; --space) {
-                System.out.print("  ");
+                System.out.print("    "); // 4 spaces are needed to align pyramid
             }
 
-            System.out.println("@");
-            System.out.println("");
+            System.out.println("@\n");
             
         }
     }
