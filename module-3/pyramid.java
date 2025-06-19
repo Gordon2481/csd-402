@@ -1,9 +1,18 @@
+/*
+ Mike Gordon
+ 6/18/25
+ M3: Programming Assignment
+ number pyramid
+ */
+
+
 // Program that uses nested for loops to output a number pyramid with @ symbols
 // on the right side
 
 public class pyramid {
 
     public static void main(String[] args) {
+        // Initialize variables
         int row;
         int column;
         int space;
@@ -45,3 +54,6 @@ public class pyramid {
         }
     }
 }
+
+// method to format the pyrimid was learned from https://learnsic.com/blog/how-to-format-strings-in-java
+// initial code (left half) was taken from class instruction video "Nested, Break, Continue"
