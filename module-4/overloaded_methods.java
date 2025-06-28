@@ -1,3 +1,10 @@
+/* 
+Mike Gordon
+06/28/2025
+M4: Programming Assignment 
+ */
+
+ 
 /* Program with four overloaded methods that return
 the average of an array*/
 
@@ -55,7 +62,7 @@ public class overloaded_methods {
         long[] longArray = { 100L, 200L, 300L, 400L, 500L };
         double[] doubleArray = { 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 };
 
-        // Display results
+        // Display results for Short Array
         System.out.print("Short Array Starting Values: ");
         // loop through the array and print original values
         for (int i = 0; i < shortArray.length; i++) {
@@ -65,14 +72,54 @@ public class overloaded_methods {
                 System.out.print(", ");
             }
         }
+        System.out.println("\nAverage of int values: " + average(shortArray));
 
-        System.out.println("\nAverage of short values: " + average(shortArray));
+        // Display resultes for Int Array
+        System.out.print("Int Array Starting Values: ");
+        // loop through the array and print original values
+        for (int i = 0; i < intArray.length; i++) {
+            System.out.print(intArray[i]);
+            // add a comma and space if not the last value
+            if (i < intArray.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("\nAverage of int values: " + average(intArray));
+
+
+        // Display results for Long Array
+        System.out.print("Long Array Starting Values: ");
+        // loop through the array and print original values
+        for (int i = 0; i < longArray.length; i++) {
+            System.out.print(longArray[i]);
+            // add a comma and space if not the last value
+            if (i < longArray.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("\nAverage of long values: " + average(longArray));
+
+
+        // Display results for Double Array
+        System.out.print("Double Array Starting Values: ");
+        // loop through the array and print original values
+        for (int i = 0; i < doubleArray.length; i++) {
+            System.out.print(doubleArray[i]);
+            // add a comma and space if not the last value
+            if (i < doubleArray.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("\nAverage of double values: " + average(doubleArray));
 
     }
 
 }
 
 /*
- * The following source was used for longArray
- * https://stackoverflow.com/questions/6834037/initialize-a-long-in-java
+ The following source was used for longArray
+ https://stackoverflow.com/questions/6834037/initialize-a-long-in-java
+
+ How to create overloaded methods, for loops, and all remaining code was learned from
+ "Introduction to Java Programming and Data Structures"
  */
