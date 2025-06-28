@@ -47,4 +47,29 @@ public class overloaded_methods {
     return (double)(sum/array.length);
     }
 
+    // Test each method and display the average and original array elements
+    public static void main(String[] args) {
+        // Define arrays and ensure they are different sizes
+        short[] shortArray = {10, 20, 30};
+        int[] intArray = {5, 10, 15, 20};
+        long[] longArray = {100L, 200L, 300L, 400L, 500L};
+        double[] doubleArray = {1.1, 1.2, 1.3, 1.4, 1.5, 1.6};
+    
+        // Display results
+        System.out.print("Short Array: ");
+        // loop through the array and print original values
+        for (int i = 0; i < shortArray.length; i++) {
+            System.out.print(shortArray[i]);
+        }
+        System.out.println("Average: " + average(shortArray));
+    
+
+    }    
+
 }
+
+
+
+
+/* The following source was used for longArray 
+https://stackoverflow.com/questions/6834037/initialize-a-long-in-java */
