@@ -1,5 +1,11 @@
 public class locateElement {
     /*
+     *  Mike Gordon
+     *  7/5/2025
+     *  M5 Largest/Smallest methods
+     */
+    
+    /*
      * Write methods using the following headers that returns the location of the
      * largest element in the array
      * passed to the method returning a one-dimensional array that contains two
@@ -161,3 +167,6 @@ public class locateElement {
     }
 
 }
+
+/* Code developed based on concepts from "Introduction to Java Programming and Data Structures"
+by Y. Daniel Liang and instructional videos by Darrell Payne.*/
