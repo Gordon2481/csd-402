@@ -99,7 +99,7 @@ public class FanTest {
 
             // conditional statements for on
             if (on) {
-                return "Fan is ON. Speed: " + speedString + "\nColor: " + color +
+                return "Fan is ON. \nSpeed: " + speedString + "\nColor: " + color +
                         "\nRadius: " + radius;
             } else {
                 return "Fan is OFF. \nColor: " + color + "\nRadius: " + radius;
@@ -130,3 +130,6 @@ public class FanTest {
 
     }
 }
+
+/*Code developed based on concepts from Introduction to Java Programming and Data Structures by Y. Daniel Liang
+ and instructional videos by Darrell Payne. */
