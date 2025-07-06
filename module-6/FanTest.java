@@ -7,18 +7,24 @@
 /*Write a program with a class titled Fan. This class is to contain:
 Four constants named STOPPED, SLOW, MEDIUM, and FAST. The constants are to hold the values of 0, 1, 2, and 3 
 respectively.*/
-public class FanTest{
+public class FanTest {
+
     public static class Fan {
-        //Constants
+        // Constants
         public static final int STOPPED = 0;
         public static final int SLOW = 1;
         public static final int MEDIUM = 2;
         public static final int FAST = 3;
 
-        /*A private field named speed that holds one of the constant values with the default being STOPPED. 
-    A private Boolean field titled on that specifies whether the fan is on or off. 
-    A private field named radius that holds the radius of the fan with a default value of 6. 
-    A String field that holds the color, with the default being white. */
+        /*
+         * A private field named speed that holds one of the constant values with the
+         * default being STOPPED. 
+         * A private Boolean field titled on that specifies whether the fan is on or
+         * off. 
+         * A private field named radius that holds the radius of the fan with a default
+         * value of 6. 
+         * A String field that holds the color, with the default being white.
+         */
 
         // Private fields
         private int speed;
@@ -35,7 +41,7 @@ public class FanTest{
         }
 
         // A constructor takes arguments and sets values.
-        public Fan(int spee, boolean on, double radius, String color) {
+        public Fan(int speed, boolean on, double radius, String color) {
             this.speed = speed;
             this.on = on;
             this.radius = radius;
@@ -47,12 +53,15 @@ public class FanTest{
         public int getSpeed() {
             return speed;
         }
+
         public boolean isOn() {
             return on;
         }
+
         public double getRadius() {
             return radius;
         }
+
         public String getColor() {
             return color;
         }
@@ -61,12 +70,15 @@ public class FanTest{
         public void setSpeed(int speed) {
             this.speed = speed;
         }
+
         public void setOn(boolean on) {
             this.on = on;
         }
+
         public void setRadius(double radius) {
             this.radius = radius;
         }
+
         public void setColor(String color) {
             this.color = color;
         }
@@ -77,31 +89,44 @@ public class FanTest{
             // conditional statements for speed
             if (speed == SLOW) {
                 speedString = "SLOW";
-            }else if (speed == MEDIUM) {
+            } else if (speed == MEDIUM) {
                 speedString = "MEDIUM";
-            }else if (speed == FAST) {
+            } else if (speed == FAST) {
                 speedString = "FAST";
-            }else {
+            } else {
                 speedString = "STOPPED";
             }
 
             // conditional statements for on
             if (on) {
                 return "Fan is ON. Speed: " + speedString + "\nColor: " + color +
-                "\nRadius: " + radius;
+                        "\nRadius: " + radius;
             } else {
                 return "Fan is OFF. \nColor: " + color + "\nRadius: " + radius;
             }
         }
     }
 
-    /* Write test code that creates two instances of the Fan class, one using the default constructor and the
-    other using the argument constructor. Write code that displays the functionality of the Fan class methods.*/
+    /*
+     * Write test code that creates two instances of the Fan class, one using the
+     * default constructor and the
+     * other using the argument constructor. Write code that displays the
+     * functionality of the Fan class methods.
+     */
     public static void main(String[] args) {
+
         // Create Fan using no argument constructor
+        Fan fan1 = new Fan();
 
         // Create Fan using argument constructor
+        Fan fan2 = new Fan(Fan.SLOW, true, 9.5, "blue");
 
         // Display fan functionality
+        System.out.println("Fan 1:");
+        System.out.println(fan1);
+
+        System.out.println("Fan 2:");
+        System.out.println(fan2);
+
     }
 }
