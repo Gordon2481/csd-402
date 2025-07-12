@@ -1,6 +1,8 @@
-/*Write a program with a class titled Fan. This class is to contain:
-Four constants named STOPPED, SLOW, MEDIUM, and FAST. The constants are to hold the values of 0, 1, 2, and 3 
-respectively.*/
+
+/*Module 6 code copied to file*/
+
+import java.util.ArrayList;
+
 public class FanTest {
 
     public static class Fan {
@@ -9,16 +11,6 @@ public class FanTest {
         public static final int SLOW = 1;
         public static final int MEDIUM = 2;
         public static final int FAST = 3;
-
-        /*
-         * A private field named speed that holds one of the constant values with the
-         * default being STOPPED. 
-         * A private Boolean field titled on that specifies whether the fan is on or
-         * off. 
-         * A private field named radius that holds the radius of the fan with a default
-         * value of 6. 
-         * A String field that holds the color, with the default being white.
-         */
 
         // Private fields
         private int speed;
@@ -76,37 +68,71 @@ public class FanTest {
         public void setColor(String color) {
             this.color = color;
         }
+    }
 
-        // Write a toString() method that returns a description of the Fans state.
-        public String toString() {
-            String speedString = "";
-            // conditional statements for speed
-            if (speed == SLOW) {
-                speedString = "SLOW";
-            } else if (speed == MEDIUM) {
-                speedString = "MEDIUM";
-            } else if (speed == FAST) {
-                speedString = "FAST";
-            } else {
-                speedString = "STOPPED";
+    // Write a toString() method that returns a description of the Fans state.
+    // public String toString() {
+    // String speedString = "";
+    // // conditional statements for speed
+    // if (speed == SLOW) {
+    // speedString = "SLOW";
+    // } else if (speed == MEDIUM) {
+    // speedString = "MEDIUM";
+    // } else if (speed == FAST) {
+    // speedString = "FAST";
+    // } else {
+    // speedString = "STOPPED";
+    // }
+
+    // // conditional statements for on
+    // if (on) {
+    // return "Fan is ON. \nSpeed: " + speedString + "\nColor: " + color +
+    // "\nRadius: " + radius;
+    // } else {
+    // return "Fan is OFF. \nColor: " + color + "\nRadius: " + radius;
+    // }
+    // }
+    // }
+
+    /* M7 Code */
+    public static class UseFans {
+
+        // Display a single Fan
+        public static void displayFan(Fan fan) {
+            System.out.println("Fan is " + (fan.isOn() ? "on" : "off"));
+            if (fan.isOn()) {
+                String speedString;
+                if (fan.getSpeed() == Fan.SLOW)
+                    speedString = "SLOW";
+                else if (fan.getSpeed() == Fan.MEDIUM)
+                    speedString = "MEDIUM";
+                else if (fan.getSpeed() == Fan.FAST)
+                    speedString = "FAST";
+                else
+                    speedString = "STOPPED";
+                System.out.println("Speed: " + speedString);
             }
+            System.out.println("Color: " + fan.getColor());
+            System.out.println("Radius: " + fan.getRadius());
 
-            // conditional statements for on
-            if (on) {
-                return "Fan is ON. \nSpeed: " + speedString + "\nColor: " + color +
-                        "\nRadius: " + radius;
-            } else {
-                return "Fan is OFF. \nColor: " + color + "\nRadius: " + radius;
+        }
+
+        // Display a collection of Fans
+        public static void fanCollection(ArrayList fanList) {
+            System.out.println("fanList size: " + fanList.size());
+            int count = 1;
+            for (int i = 0; i < fanList.size(); i++) {
+                Object obj = fanList.get(i);
+                if (obj instanceof Fan) {
+                    Fan fan = (Fan) obj;
+                    System.out.println("Fan " + count + ":");
+                    displayFan(fan);
+                    count++;
+                }
             }
         }
     }
 
-    /*
-     * Write test code that creates two instances of the Fan class, one using the
-     * default constructor and the
-     * other using the argument constructor. Write code that displays the
-     * functionality of the Fan class methods.
-     */
     public static void main(String[] args) {
 
         // Create Fan using no argument constructor
@@ -115,15 +141,27 @@ public class FanTest {
         // Create Fan using argument constructor
         Fan fan2 = new Fan(Fan.SLOW, true, 9.5, "blue");
 
-        // Display fan functionality
-        System.out.println("Fan 1:");
-        System.out.println(fan1);
+        Fan fan3 = new Fan(Fan.FAST, true, 11, "red");
 
-        System.out.println("Fan 2:");
-        System.out.println(fan2);
+        // Show a single fan without toString()
+        System.out.println("Display of a single fan: ");
+        UseFans.displayFan(fan3);
+
+        // Create a collection of fans
+        ArrayList fanList = new ArrayList();
+        fanList.add(fan1);
+        fanList.add(fan2);
+        fanList.add(fan3);
+
+        // Display all fans in the collection without toString()
+        System.out.println("Displaying all fans: ");
+        UseFans.fanCollection(fanList);
 
     }
 }
 
-/*Code developed based on concepts from Introduction to Java Programming and Data Structures by Y. Daniel Liang
- and instructional videos by Darrell Payne. */
+/*
+ * Code developed based on concepts from Introduction to Java Programming and
+ * Data Structures by Y. Daniel Liang
+ * and instructional videos by Darrell Payne.
+ */
