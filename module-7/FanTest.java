@@ -1,23 +1,25 @@
+/*
+  Mike Gordon
+  7/12/2025
+  Module 7 UseFans
+
+  Module 7 code is lines 91-139 and 149-163
+ */
 
 /*Module 6 code copied to file*/
-
 import java.util.ArrayList;
-
 public class FanTest {
-
     public static class Fan {
         // Constants
         public static final int STOPPED = 0;
         public static final int SLOW = 1;
         public static final int MEDIUM = 2;
         public static final int FAST = 3;
-
         // Private fields
         private int speed;
         private boolean on;
         private double radius;
         private String color;
-
         // A no-argument constructor that sets all fields with a default value.
         public Fan() {
             this.speed = STOPPED;
@@ -25,7 +27,6 @@ public class FanTest {
             this.radius = 6.0;
             this.color = "white";
         }
-
         // A constructor takes arguments and sets values.
         public Fan(int speed, boolean on, double radius, String color) {
             this.speed = speed;
@@ -33,43 +34,35 @@ public class FanTest {
             this.radius = radius;
             this.color = color;
         }
-
         // Setter and getter methods for all mutable fields.
         // Getter methods
         public int getSpeed() {
             return speed;
         }
-
         public boolean isOn() {
             return on;
         }
-
         public double getRadius() {
             return radius;
         }
-
         public String getColor() {
             return color;
         }
-
         // Setter methods
         public void setSpeed(int speed) {
             this.speed = speed;
         }
-
         public void setOn(boolean on) {
             this.on = on;
         }
-
         public void setRadius(double radius) {
             this.radius = radius;
         }
-
         public void setColor(String color) {
             this.color = color;
         }
     }
-
+// toString() code is commented out since it is not being used
     // Write a toString() method that returns a description of the Fans state.
     // public String toString() {
     // String speedString = "";
@@ -94,14 +87,21 @@ public class FanTest {
     // }
     // }
 
+
     /* M7 Code */
     public static class UseFans {
 
-        // Display a single Fan
+        // Display a single Fan without using the toString() method
         public static void displayFan(Fan fan) {
+
+            // Display if fan is on or off using ternary operator
             System.out.println("Fan is " + (fan.isOn() ? "on" : "off"));
+
+            // If the fan is on, display the speed
             if (fan.isOn()) {
                 String speedString;
+
+                // Determine what to print for fan speed
                 if (fan.getSpeed() == Fan.SLOW)
                     speedString = "SLOW";
                 else if (fan.getSpeed() == Fan.MEDIUM)
@@ -112,6 +112,8 @@ public class FanTest {
                     speedString = "STOPPED";
                 System.out.println("Speed: " + speedString);
             }
+
+            // Print color and radius regardless if fan is on or off
             System.out.println("Color: " + fan.getColor());
             System.out.println("Radius: " + fan.getRadius());
 
@@ -119,10 +121,13 @@ public class FanTest {
 
         // Display a collection of Fans
         public static void fanCollection(ArrayList fanList) {
-            System.out.println("fanList size: " + fanList.size());
-            int count = 1;
+            int count = 1; // Counter used to label each fan
+
+            // Loop through array
             for (int i = 0; i < fanList.size(); i++) {
                 Object obj = fanList.get(i);
+
+                // Make sure the object is a Fan
                 if (obj instanceof Fan) {
                     Fan fan = (Fan) obj;
                     System.out.println("Fan " + count + ":");
@@ -134,13 +139,13 @@ public class FanTest {
     }
 
     public static void main(String[] args) {
-
         // Create Fan using no argument constructor
         Fan fan1 = new Fan();
 
         // Create Fan using argument constructor
         Fan fan2 = new Fan(Fan.SLOW, true, 9.5, "blue");
 
+        // Add fan3 to test array
         Fan fan3 = new Fan(Fan.FAST, true, 11, "red");
 
         // Show a single fan without toString()
