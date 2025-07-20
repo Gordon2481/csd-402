@@ -1,3 +1,10 @@
+/*
+ * Mike Gordon
+ * 7/20/2025
+ * M8: Programming Assignment
+ */
+
+
 // import arraylist and scanner
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -57,7 +64,7 @@ public class MikeArrayList {
         
         // Show that zero is included by printing out all values
         System.out.println("All integers entered: " + numbers);
-        
+
         // The method will return the largest value that is displayed to the user.
         System.out.println ("The biggest value entered is: " + biggest);
 
@@ -65,3 +72,9 @@ public class MikeArrayList {
     }
     
 }
+
+/*
+ * Code developed based on concepts from Introduction to Java Programming and
+ * Data Structures by Y. Daniel Liang
+ * and instructional videos by Darrell Payne.
+ */
