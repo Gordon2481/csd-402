@@ -26,22 +26,21 @@ public class MikeArrayList {
 
     }
 
-    //This class is to contain:
-    //Write additional code for testing your method.
-    
+   
     public static void main(String[] args) {
+
+        // Create scanner for user input
         Scanner userInput = new Scanner(System.in);
         
-        //A method that receives an ArrayList populated with an Integer data type
-        //holding the integers received from user input.
+        //ArrayList to hold values
         ArrayList<Integer> numbers = new ArrayList<>();
         
         //The user input is to accept Integers that are then assigned to the ArrayList
         // until a value of 0 is entered, which is also assigned to the ArrayList.
-        System.out.println ('Enter integers. Enter 0 to stop the program.: ');
+        System.out.println ("Enter integers. Enter 0 to stop the program.: ");
         
         while (true) {
-            System.out.println('Enter an integer: ');
+            System.out.println("Enter an integer: ");
             int input = userInput.nextInt();
             
             // Add user input to the ArrayList
@@ -56,9 +55,13 @@ public class MikeArrayList {
         //The ArrayList is then to be sent to the method.
         Integer biggest = max(numbers);
         
+        // Show that zero is included by printing out all values
+        System.out.println("All integers entered: " + numbers);
+        
         // The method will return the largest value that is displayed to the user.
-        System.out.println ('The biggest value entered is: ' + biggest);
-        scanner.close();
+        System.out.println ("The biggest value entered is: " + biggest);
+
+        userInput.close();
     }
     
 }
