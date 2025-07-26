@@ -15,7 +15,7 @@ public class CreateFile {
 
         // Write 10 randomly generated numbers
         try {
-            pw = new PrintWriter(file);
+            pw = new PrintWriter(new FileOutputStream(file, true)); //append if already exists
             System.out.println("Write File");
 
             // use a loop to add ten random numbers
