@@ -1,3 +1,9 @@
+/*
+ * Mike Gordon
+ * 7/26/25
+ * M9 Program 2
+ */
+
 import java.io.*;
 import java.util.*;
 
@@ -36,7 +42,7 @@ public class CreateFile {
             sc = new Scanner(file);
 
             while (sc.hasNext()) {
-                System.out.println(sc.next() + " ");
+                System.out.print(sc.next() + " ");
             }
 
             sc.close();
@@ -47,3 +53,8 @@ public class CreateFile {
 
     }
 }
+/*
+ * Code developed based on concepts from Introduction to Java Programming and
+ * Data Structures by Y. Daniel Liang
+ * and instructional videos by Darrell Payne.
+ */
