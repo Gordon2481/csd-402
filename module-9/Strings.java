@@ -1,3 +1,9 @@
+/*
+ * Mike Gordon
+ * 7/26/25
+ * M9 Program 1
+ */
+
 // Import util for ArrayList
 import java.util.ArrayList;
 // Import util for user input
@@ -23,12 +29,13 @@ public class Strings {
         // loop to print the ArrayList collection
         System.out.println("This is the full list: ");
         for (String word : stringList) {
-            System.out.println(word);
+            System.out.print(word + " ");
         }
 
         // Ask user which element they would like to see again
         Scanner prompt = new Scanner(System.in);
-        System.out.println("Which element index would you like to see again (0-9)? ");
+        // prompt the user on the next line
+        System.out.println("\n\nWhich element index would you like to see again (0-9)? ");
 
         // convert user input to a string
         String userInput = prompt.nextLine();
@@ -49,3 +56,8 @@ public class Strings {
         }
     }
 }
+/*
+ * Code developed based on concepts from Introduction to Java Programming and
+ * Data Structures by Y. Daniel Liang
+ * and instructional videos by Darrell Payne.
+ */
