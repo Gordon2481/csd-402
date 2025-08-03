@@ -7,5 +7,27 @@ a field for the language spoken, and a constructor that requires all fields when
 The DomesticDivision class includes a field for the state in which the division is located and 
 a constructor that requires all fields when created. 
 Write an application named UseDivision that creates two instances of each of these concrete classes 
-(4 total instances).
-Save the files as: Division, InternationalDivision, DomesticDivision, and UseDivision. */
+(4 total instances). */
+
+
+// Abstract class for company Division
+public abstract class Division {
+
+    private String divisionName;
+    private int accountNumber;
+
+    // Constructor using name and account number
+    public Division(String divisionName, int accountNumber) {
+        this.divisionName = divisionName;
+        this.accountNumber = accountNumber;
+    }
+
+    // Getter for division name
+    public String getDivisionName() {
+        return divisionName;
+    }
+    // Getter for account number
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+}
