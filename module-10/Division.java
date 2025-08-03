@@ -1,9 +1,7 @@
-/*Create an abstract Division class with fields for a company's division name and account number
-and an abstract display () method that will be defined in the subclasses.
- 
-Write an application named UseDivision that creates two instances of each of these concrete classes 
-(4 total instances). */
-
+/* Mike Gordon
+ * 8/3/25
+ * M10 Programming Assignment
+ */
 
 // Abstract class for company Division
 public abstract class Division {
@@ -29,3 +27,9 @@ public abstract class Division {
     // Abstract method to display division
     public abstract void display();
 }
+
+/*
+ * Code developed based on concepts from Introduction to Java Programming and
+ * Data Structures by Y. Daniel Liang
+ * and instructional videos by Darrell Payne.
+ */

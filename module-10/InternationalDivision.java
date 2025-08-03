@@ -1,3 +1,8 @@
+/* Mike Gordon
+ * 8/3/25
+ * M10 Programming Assignment
+ */
+
 // Subclass for international divisions
 public class InternationalDivision extends Division {
     private String country;
@@ -19,5 +24,21 @@ public class InternationalDivision extends Division {
     public String getLanguage() {
         return language;
     }
+
+    // Use display method
+    @Override
+    public void display() {
+        System.out.println("International Division: " + getDivisionName());
+        System.out.println("Account Number: " + getAccountNumber());
+        System.out.println("Country: " + country);
+        System.out.println("Language: " + language);
+        System.out.println("--------------------");// Blank line to help with readability
+    }
     
 }
+
+/*
+ * Code developed based on concepts from Introduction to Java Programming and
+ * Data Structures by Y. Daniel Liang
+ * and instructional videos by Darrell Payne.
+ */
