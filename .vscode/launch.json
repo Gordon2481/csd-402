@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "AutoService",
+      "request": "launch",
+      "mainClass": "AutoService",
+      "projectName": "csd-402_1db6cb0a"
+    },
+    {
+      "type": "java",
       "name": "VBoxExample",
       "request": "launch",
       "mainClass": "VBoxExample",
