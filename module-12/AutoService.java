@@ -28,6 +28,20 @@ public class AutoService {
     }
 
     // Standard service with oil change and tire rotation
+    public static double yearlyService(boolean oilChange, boolean tireRotation) {
+
+        // set total as standard service
+        double total = STANDARD_SERVICE;
+
+        if (oilChange) {
+            total += OIL_CHANGE;
+        }   
+        if (tireRotation) {
+            total += TIRE_ROTATION;
+
+        }
+        return total;
+    }
 
     // Standard sercie with added services and coupon
     // Test each version twice
@@ -40,7 +54,13 @@ public class AutoService {
         System.out.println("Test 1 for oil change: $" + yearlyService(true));
         System.out.println("Test 2 for oil change: $" + yearlyService(false));
 
+        // Test for oil and tire rotation
+        System.out.println("Test 1 for oil change and tire rotation: $" + yearlyService(true,true));
+        System.out.println("Test 2 for oil change and tire rotation: $" + yearlyService(true, false));
+
         
+
+
 
     }
 }
