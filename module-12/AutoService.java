@@ -44,6 +44,20 @@ public class AutoService {
     }
 
     // Standard sercie with added services and coupon
+    public static double yearlyService(boolean oilChange, boolean tireRotation, double couponAmount) {
+        
+        // set total as yearly service with oilchange and tire rotation as parameters
+        double total = yearlyService(oilChange, tireRotation);
+        
+        // subtract coupon amount
+        total -= couponAmount;
+        if (total < 0) {
+            total = 0; // handle any negative amounts
+        }
+        return total;
+
+    }
+
     // Test each version twice
     public static void main(String[] args) {
         // Tests for no parameters
@@ -58,9 +72,9 @@ public class AutoService {
         System.out.println("Test 1 for oil change and tire rotation: $" + yearlyService(true,true));
         System.out.println("Test 2 for oil change and tire rotation: $" + yearlyService(true, false));
 
+        // Test for coupon use
+        System.out.println("Test 1 for full service and $20 coupon: $" + yearlyService(true, true, 20));
+        System.out.println("Test 2 for standard service with oil change and $20 coupon: $" + yearlyService(true, false, 20));
         
-
-
-
     }
 }
