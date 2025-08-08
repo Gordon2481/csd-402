@@ -1,3 +1,8 @@
+/* Mike Gordon
+ * 8/8/25
+ * M11 Programming Assignment
+ * HBox Example
+ */
 
 // import all required for javafx
 import javafx.application.Application;
@@ -58,3 +63,11 @@ public class HBoxExample extends Application{
 
     
 }
+
+/*
+ * Code developed based on concepts from 
+ * Introduction to Java Programming and Data Structures by Y. Daniel Liang,
+ * instructional videos by Darrell Payne, as well as documentation and examples from
+ * GeeksforGeeks: https://www.geeksforgeeks.org/java/javafx-hbox-class/
+ * OpenJFX API: https://openjfx.io/javadoc/17/javafx.graphics/javafx/scene/layout/HBox.html
+ */

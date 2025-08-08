@@ -3,6 +3,14 @@
   "configurations": [
     {
       "type": "java",
+      "name": "VBoxExample",
+      "request": "launch",
+      "mainClass": "VBoxExample",
+      "projectName": "csd-402_1db6cb0a",
+      "vmArgs": "--module-path C:/csd/javafx-sdk-24.0.2/lib --add-modules javafx.controls"
+    },
+    {
+      "type": "java",
       "name": "Launch HBoxExample",
       "request": "launch",
       "mainClass": "HBoxExample",
