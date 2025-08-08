@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "compile HBoxExample",
+      "type": "shell",
+      "command": "javac",
+      "args": [
+        "--module-path",
+        "C:/csd/javafx-sdk-24.0.2/lib",
+        "--add-modules",
+        "javafx.controls",
+        "HBoxExample.java"
+      ],
+      "group": "build",
+      "problemMatcher": ["$javac"]
+    }
+  ]
+}
