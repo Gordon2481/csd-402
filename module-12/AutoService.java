@@ -19,6 +19,13 @@ public class AutoService {
     }
 
     // Standard service with oil change
+    public static double yearlyService(boolean oilChange) {
+        if (oilChange) {
+            return STANDARD_SERVICE + OIL_CHANGE; // standard with oil
+        } else {
+            return yearlyService(); // standard only
+        }
+    }
 
     // Standard service with oil change and tire rotation
 
@@ -28,5 +35,12 @@ public class AutoService {
         // Tests for no parameters
         System.out.println("Test 1 for Standard only: $" + yearlyService());
         System.out.println("Test 2 for Standard only: $" + yearlyService());
+
+        // Test for oil change
+        System.out.println("Test 1 for oil change: $" + yearlyService(true));
+        System.out.println("Test 2 for oil change: $" + yearlyService(false));
+
+        
+
     }
 }
